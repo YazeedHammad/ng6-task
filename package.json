@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "postinstall": "npm run bulid",
-  "main": "index.js",
   "scripts": {
     "build": "cd ngApp && ng build --prod"
   },
