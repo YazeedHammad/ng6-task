@@ -18,7 +18,7 @@ app.get('/', function(req, res) {
 app.use(express.static(__dirname + './ngApp/dist/ngApp'));
 
 app.get('/*', (req,res) => {
-    res.status(200).sendFile(path.resolve(__dirname, './ngApp/dist/ngApp/index.html'))
+    res.sendFile(path.join(__dirname, './ngApp/dist/ngApp/index.html'))
 })
 
 app.listen(PORT, function() {
