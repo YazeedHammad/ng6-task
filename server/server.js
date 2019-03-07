@@ -14,6 +14,12 @@ app.get('/', function(req, res) {
     res.send('Hello From Server')
 })
 
+app.use(express.static(__dirname + './ngApp/dist/ngApp'));
+
+app.get('/*', (req,res) => {
+    res.status(200).sendFile(path.resolve(__dirname, './ngApp/dist/ngApp/index.html'))
+})
+
 app.listen(PORT, function() {
     console.log('Server Running on Localhost: ' + PORT)
 })

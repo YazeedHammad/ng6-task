@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd .. && cd ngApp && ng build --prod"
+    "build": "cd .. && cd ngApp && ng build --prod",
+    "client-install": "npm install --prefix client",
+    "start": "node server",
+    "server": "nodemon index.js",
+    "client": "cd .. && cd ngApp && ng serve -o",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
