@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
 
-const PORT = process.env.PORT || 3000;
+// const PORT = process.env.PORT || 3000;
 const api = require('./routes/api');
 const app = express();
 app.use(cors());
@@ -21,6 +21,6 @@ app.get('/*', (req,res) => {
     res.sendFile(path.join(__dirname, './ngApp/dist/ngApp/index.html'))
 })
 
-app.listen(PORT, function() {
+app.listen(process.env.PORT || 3000, function() {
     console.log('Server Running on Localhost: ' + PORT)
 })
