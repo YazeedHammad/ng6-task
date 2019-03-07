@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
 
-// const PORT = process.env.PORT || 3000;
+ const PORT =  3000;
 const api = require('./routes/api');
 const app = express();
 app.use(express.static('./ngApp/dist/ngApp'));
